@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WeatherNow — Final Project Presentation</title>
+  <meta name="description" content="WeatherNow final project landing page: overview, agile board, wireframe, roadmap, and deployment info." />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <div>
+        <h1 class="brand">WeatherNow</h1>
+        <p class="tag">Real-time weather dashboard — Final Project Presentation</p>
+      </div>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="#overview">Overview</a>
+        <a href="#board">Agile Board</a>
+        <a href="#landing">Landing</a>
+        <a href="#wireframe">Wireframe</a>
+        <a href="#roadmap">Roadmap</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Overview -->
+    <section id="overview" class="panel container">
+      <h2>Project Overview</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>What is WeatherNow?</h3>
+          <p>WeatherNow is a lightweight web dashboard that fetches live weather data and 7-day forecasts for any city. Its main purpose is to demonstrate API integration, responsive UI, and CI/CD deployment in a student project.</p>
+          <p><strong>Target audience:</strong> Instructors, classmates, and anyone who needs a clean, quick weather snapshot.</p>
+          <button class="btn btn-primary open-modal" data-modal="overview-more">More Info</button>
+        </article>
+
+        <article class="card">
+          <h3>Key Goals</h3>
+          <ul>
+            <li>Consume external weather API (OpenWeatherMap)</li>
+            <li>Responsive design for mobile & desktop</li>
+            <li>Automated build & deploy with GitHub Actions → Netlify/Vercel</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Success Criteria</h3>
+          <ul>
+            <li>Accurate current weather & 7-day forecast</li>
+            <li>Accessible UI, loading and error states</li>
+            <li>Public demo link + GitHub repo with CI/CD</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Agile Board -->
+    <section id="board" class="panel container">
+      <h2>Agile Board — Sprint Planning</h2>
+
+      <div class="board">
+        <div class="column">
+          <h4>Epics</h4>
+          <ul class="epic-list">
+            <li class="epic">
+              <button class="epic-toggle" aria-expanded="false">Weather API Integration</button>
+              <ul class="features">
+                <li>Feature: Fetch current weather data</li>
+                <li>Feature: Fetch 7-day forecast</li>
+                <li>Feature: Handle API errors and timeouts</li>
+              </ul>
+            </li>
+            <li class="epic">
+              <button class="epic-toggle" aria-expanded="false">User Interface Design</button>
+              <ul class="features">
+                <li>Feature: Create city search bar</li>
+                <li>Feature: Display current weather details</li>
+                <li>Feature: Dark/light mode toggle</li>
+              </ul>
+            </li>
+            <li class="epic">
+              <button class="epic-toggle" aria-expanded="false">Deployment & CI/CD</button>
+              <ul class="features">
+                <li>Feature: Deploy to Netlify or Vercel</li>
+                <li>Feature: GitHub Actions to automate build</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="column">
+          <h4>Sprint 1 — Backlog → Ready</h4>
+          <ol class="story-list">
+            <li>
+              <strong>Story:</strong> As a user, I can enter a city name and get the current temperature and condition.
+              <div class="story-meta">Est: 3 pts • Priority: High</div>
+            </li>
+            <li>
+              <strong>Story:</strong> As a user, I see a loading indicator while data loads.
+              <div class="story-meta">Est: 1 pt • Priority: Medium</div>
+            </li>
+            <li>
+              <strong>Story:</strong> As a developer, I have a deploy preview for every PR.
+              <div class="story-meta">Est: 2 pts • Priority: Medium</div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="column">
+          <h4>Board Preview</h4>
+          <div class="mini-board">
+            <div class="mini-col">
+              <h5>Backlog</h5>
+              <div class="card-sm">Fetch 7-day forecast</div>
+              <div class="card-sm">Dark mode</div>
+            </div>
+            <div class="mini-col">
+              <h5>Ready</h5>
+              <div class="card-sm">Fetch current weather data</div>
+              <div class="card-sm">Create city search bar</div>
+            </div>
+            <div class="mini-col">
+              <h5>In Progress</h5>
+              <div class="card-sm in-progress">Handle API errors</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Landing page / Links -->
+    <section id="landing" class="panel container">
+      <h2>Landing Page & Repo</h2>
+      <div class="landing-grid">
+        <div>
+          <p><strong>Source code (GitHub):</strong></p>
+          <p class="link-line"><a id="github-url" href="https://github.com/Kp7885/weathernow" target="_blank" rel="noopener">https://github.com/YOUR_USERNAME/YOUR_REPO</a></p>
+
+          <p><strong>Public demo (deployed):</strong></p>
+          <p class="link-line"><a id="deployed-url" href="https://your-deployed-site.example" target="_blank" rel="noopener">https://your-deployed-site.example</a></p>
+
+          <p><strong>CI / CD:</strong></p>
+          <p class="badge-line">
+            <!-- Replace these image src / links with your real CI badge or deploy preview -->
+            <img alt="GitHub Actions badge placeholder" class="badge" src="https://img.shields.io/badge/CI-GitHub%20Actions-blue">
+            <img alt="Deploy badge placeholder" class="badge" src="https://img.shields.io/badge/Deploy-Vercel-brightgreen">
+          </p>
+        </div>
+
+        <div>
+          <h4>Quick demo controls</h4>
+          <div class="demo-controls">
+            <input id="demoCity" placeholder="Type demo city (e.g., Chicago)" />
+            <button id="demoFetch" class="btn">Run Demo Fetch</button>
+          </div>
+          <div id="demoResult" class="demo-result" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wireframe -->
+    <section id="wireframe" class="panel container">
+      <h2>Wireframe</h2>
+      <p>Upload your Figma/Visio export here or paste the public share link — placeholder below:</p>
+      <div class="wireframe-grid">
+        <div class="wireframe-card">
+          <img id="wireframe-img" src="wireframe-placeholder.png" alt="Wireframe placeholder — replace with your Figma export">
+          <p class="muted">Replace this image with your Figma PNG export or provide a link to the Figma prototype.</p>
+        </div>
+        <div class="wireframe-details">
+          <h4>Wireframe notes</h4>
+          <ul>
+            <li>Top search bar with city input</li>
+            <li>Main card with current weather and icon</li>
+            <li>Forecast carousel below</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section id="roadmap" class="panel container">
+      <h2>Roadmap & Tools</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="time">Week 1</div>
+          <div class="desc"><strong>Setup & API integration</strong><br>OpenWeatherMap API, basic fetch & display</div>
+        </div>
+        <div class="timeline-item">
+          <div class="time">Week 2</div>
+          <div class="desc"><strong>UI & Responsiveness</strong><br>Mobile-first CSS, cards, accessibility</div>
+        </div>
+        <div class="timeline-item">
+          <div class="time">Week 3</div>
+          <div class="desc"><strong>Deployment & CI/CD</strong><br>GitHub Actions + Vercel/Netlify</div>
+        </div>
+        <div class="timeline-item">
+          <div class="time">Future</div>
+          <div class="desc"><strong>Long-term plans</strong><br>Historical data, user preferences, heatmaps</div>
+        </div>
+      </div>
+
+      <h3>Stack & Tools</h3>
+      <ul class="tools-list">
+        <li>HTML • CSS • Vanilla JavaScript</li>
+        <li>OpenWeatherMap API</li>
+        <li>GitHub (source + Actions), Netlify/Vercel</li>
+        <li>Figma for wireframes</li>
+      </ul>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Prepared for: Final Project Presentation • Date: Oct 23rd</p>
+        <p>Contact: <a href="mailto:you@example.com">you@example.com</a></p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Modal templates -->
+  <div id="modal-root" aria-hidden="true"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
