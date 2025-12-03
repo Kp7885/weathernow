@@ -1,0 +1,53 @@
+.alerts-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 360px;
+  height: 100vh;
+  background: #111827;
+  color: white;
+  overflow-y: auto;
+  box-shadow: -4px 0 14px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  padding: 20px;
+}
+
+.alerts-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+}
+
+.alert-card {
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+/* Severity Colors */
+.alert-red {
+  background: rgba(239, 68, 68, 0.15);
+  border-left: 4px solid #ef4444;
+}
+.alert-orange {
+  background: rgba(249, 115, 22, 0.15);
+  border-left: 4px solid #f97316;
+}
+.alert-yellow {
+  background: rgba(250, 204, 21, 0.15);
+  border-left: 4px solid #facc15;
+}
+
+.alert-meta {
+  margin-top: 8px;
+  font-size: 13px;
+  opacity: 0.85;
+}

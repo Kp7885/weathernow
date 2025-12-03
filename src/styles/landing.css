@@ -1,0 +1,76 @@
+.landing {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+/* Floating animated circles */
+.floating-circles span {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
+  animation: float 6s infinite ease-in-out;
+}
+
+.floating-circles span:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+.floating-circles span:nth-child(2) { top: 30%; right: 15%; animation-delay: 1.2s; }
+.floating-circles span:nth-child(3) { bottom: 15%; left: 25%; animation-delay: 2s; }
+.floating-circles span:nth-child(4) { bottom: 25%; right: 20%; animation-delay: 3s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+
+.title {
+  font-size: 60px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  font-size: 18px;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+.btn-row {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.primary-btn, .secondary-btn {
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 17px;
+  text-decoration: none;
+  color: white;
+  transition: 0.25s;
+}
+
+.primary-btn {
+  background: #3b82f6;
+}
+
+.secondary-btn {
+  background: rgba(255,255,255,0.18);
+}
+
+.primary-btn:hover {
+  background: #2563eb;
+}
+
+.secondary-btn:hover {
+  background: rgba(255,255,255,0.28);
+}

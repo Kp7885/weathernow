@@ -1,0 +1,45 @@
+.weather-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  transition: opacity 0.6s ease-in-out, background 0.6s ease-in-out;
+}
+
+/* Base overlay fade */
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: brightness(0.75) saturate(1.2);
+}
+
+/* ---- WEATHER THEMES ----- */
+
+/* ☀️ CLEAR */
+.weather-bg.clear {
+  background: linear-gradient(180deg, #ffdd67, #ffb74a);
+}
+
+/* 🌤 PARTLY CLOUDY */
+.weather-bg.cloudy {
+  background: linear-gradient(180deg, #9eb3c2, #6c7b95);
+}
+
+/* 🌧 RAIN */
+.weather-bg.rain {
+  background: linear-gradient(180deg, #546e7a, #37474f);
+}
+
+/* ❄ SNOW */
+.weather-bg.snow {
+  background: linear-gradient(180deg, #dfe9f3, #bfcdd9);
+}
+
+/* 🌩 THUNDER */
+.weather-bg.thunder {
+  background: linear-gradient(180deg, #2c3e50, #1c2833);
+}
+
+/* 🌙 NIGHT */
+.weather-bg.night {
+  background: linear-gradient(180deg, #0f172a, #1e293b);
+}
