@@ -2,7 +2,6 @@
 
 **Course:** ITMD 543 — Frontend Web Development  
 **Student:** Khushi Patel (A20561377)  
-**Instructor:** —  
 **Term:** Fall 2025
 
 ---
